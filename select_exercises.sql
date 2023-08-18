@@ -6,6 +6,7 @@ DESCRIBE albums;
 
 SELECT * FROM albums ;
 
+
 # SELECT * FROM albums WHERE name = 'Sgt Peppers Lonely Hearts Club';
 
 SELECT * FROM albums WHERE name = 'Nevermind';
