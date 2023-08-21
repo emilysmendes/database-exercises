@@ -5,7 +5,7 @@ USE employees;
 USE employees;
 
 
-/*TODO: Find all employees with first names 'Irena', 'Vidya', or 'Maya' — 709 rows (Hint: Use IN).*/
+/*TODO: Modify your first query to order by first name. The first result should be Irena Flexer and the last result should be Vidya Awdeh..*/
 
 SELECT emp_no, first_name, last_name
 FROM employees
@@ -14,27 +14,30 @@ ORDER BY first_name;
 
 
 
-/*TODO: Find all employees whose last name starts with 'E' — 7,330 rows.*/
+/*TODO: Update the query to order by first name and then last name. The first result should now be Irena Acton and the last should be Vidya Zweizig.*/
 
 SELECT emp_no, first_name, last_name
 FROM employees
-WHERE last_name LIKE 'E%';
+WHERE first_name IN ('Irena', 'Vidya', 'Maya')
+ORDER BY first_name ASC, last_name ASC;
 
 
 
-/*TODO: Find all employees with a 'q' in their last name — 1,873 rows.*/
-
-SELECT emp_no, first_name, last_name
-FROM employees
-WHERE last_name LIKE '%q%';
-
-
-
-/*TODO: Update your query for 'Irena', 'Vidya', or 'Maya' to use OR instead of IN — 709 rows.*/
+/*TODO: Change the ORDER BY clause so that you order by last name before first name. Your first result should still be Irena Acton but now the last result should be Maya Zyda.*/
 
 SELECT emp_no, first_name, last_name
 FROM employees
-WHERE first_name LIKE 'Irena' OR 'Vidya' OR 'Maya';
+WHERE first_name IN ('Irena', 'Vidya', 'Maya')
+ORDER BY last_name ASC, last_name ASC;
+
+
+
+/*TODO: Update your queries for employees with 'e' in their last name to sort the results by their employee number. Make sure the employee numbers are in the correct order.*/
+
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE '%E%'
+ORDER BY emp_no ASC;
 
 
 
@@ -54,12 +57,14 @@ FROM employees
 WHERE last_name LIKE 'E%' OR '%E';
 
 
+
 /*TODO: Duplicate the previous query and update it to find all employees whose last name starts and ends with 'E' — 899 rows.*/
 
 SELECT emp_no, first_name, last_name
 FROM employees
 WHERE last_name LIKE 'E%'
   AND last_name LIKE '%E';
+
 
 
 /*TODO: Find all employees with a 'q' in their last name but not 'qu' — 547 rows.*/
