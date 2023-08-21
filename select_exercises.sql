@@ -11,8 +11,6 @@ SELECT * FROM albums ;
 
 SELECT * FROM albums WHERE name = 'Nevermind';
 
-
-
 SELECT * FROM albums WHERE release_date = 1990;
 
 SELECT * FROM albums WHERE release_date = 1991;
