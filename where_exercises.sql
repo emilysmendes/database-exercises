@@ -1,7 +1,5 @@
 USE employees;
 
-USE employees;
-
 
 /*TODO: Find all employees with first names 'Irena', 'Vidya', or 'Maya' — 709 rows (Hint: Use IN).*/
 

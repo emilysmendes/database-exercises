@@ -1,9 +1,5 @@
 USE employees;
 
-USE employees;
-
-USE employees;
-
 
 /*TODO: Modify your first query to order by first name. The first result should be Irena Flexer and the last result should be Vidya Awdeh..*/
 
