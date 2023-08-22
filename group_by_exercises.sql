@@ -36,7 +36,7 @@ GROUP BY last_name;
 
 SELECT DISTINCT first_name, last_name
 FROM employees
-WHERE last_name LIKE 'E%' OR '%E';
+WHERE last_name LIKE 'E%' OR '%E'; /* You can also say "WHERE last_name LIKE 'E%E'; */
 
 
 /*TODO: Find the unique last names with a 'q' but not 'qu'. Your results should be:
@@ -57,3 +57,10 @@ SELECT DISTINCT COUNT(*)
 FROM employees
 WHERE last_name LIKE '%q%'
   AND last_name NOT LIKE '%qu%';
+
+
+/*TODO: Update your query for 'Irena', 'Vidya', or 'Maya'. Use count(*) and GROUP BY to find the number of employees for each gender with those names. Your results should be:
+441 M
+268 F
+ */
+
