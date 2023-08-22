@@ -53,3 +53,7 @@ WHERE last_name LIKE '%q%'
 
 /*TODO: Add a COUNT() to your results and use GROUP BY to make it easier to find employees whose unusual name is shared with others.*/
 
+SELECT DISTINCT COUNT(*)
+FROM employees
+WHERE last_name LIKE '%q%'
+  AND last_name NOT LIKE '%qu%';
