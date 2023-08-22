@@ -53,14 +53,20 @@ WHERE last_name LIKE '%q%'
 
 /*TODO: Add a COUNT() to your results and use GROUP BY to make it easier to find employees whose unusual name is shared with others.*/
 
-SELECT DISTINCT COUNT(*)
+SELECT COUNT(*) as Total, last_name AS "LAST NAME"
 FROM employees
 WHERE last_name LIKE '%q%'
-  AND last_name NOT LIKE '%qu%';
+  AND last_name NOT LIKE '%qu%'
+GROUP BY last_name;
 
 
 /*TODO: Update your query for 'Irena', 'Vidya', or 'Maya'. Use count(*) and GROUP BY to find the number of employees for each gender with those names. Your results should be:
 441 M
 268 F
  */
+
+ SELECT COUNT(*) AS Total, gender
+ FROM employees
+ WHERE first_name IN ('Irena', 'Vidya', 'Maya')
+ GROUP BY gender;
 
