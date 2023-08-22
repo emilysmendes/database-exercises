@@ -16,3 +16,24 @@ FROM employees as e
             ON title.emp_no = dm.emp_no
 WHERE title = 'Manager' AND title.to_date = '9999-01-01'
 ORDER BY dept_name;
+
+
+
+/*TODO: Find the name of all departments currently managed by women.*/
+
+SELECT d.dept_name, CONCAT(e.first_name, ' ', e.last_name) AS full_name, gender
+FROM employees as e
+         JOIN dept_manager as dm
+              ON dm.emp_no = e.emp_no
+         JOIN departments as d
+              ON d.dept_no = dm.dept_no
+         JOIN titles as title
+              ON title.emp_no = dm.emp_no
+WHERE title = 'Manager' AND title.to_date = '9999-01-01' AND gender = 'F'
+ORDER BY dept_name;
+
+
+
+/**/
+/**/
+/**/
