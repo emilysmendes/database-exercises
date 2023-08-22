@@ -1,3 +1,8 @@
+CREATE DATABASE join_test_db;
+
+USE join_test_db;
+
+
 CREATE TABLE roles (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
@@ -25,3 +30,9 @@ INSERT INTO users (name, email, role_id) VALUES
 ('adam', 'adam@example.com', 3),
 ('jane', 'jane@example.com', null),
 ('mike', 'mike@example.com', null);
+
+INSERT INTO users (name, email, role_id) VALUES
+('Harry', 'potter@example.com', 2),
+('Hermione', 'granger@example.com', 2),
+('Ron', 'Weasley@example.com', 2),
+('Draco', 'Malfoy@example.com', null);
